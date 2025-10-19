@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=BBH+Sans+Hegarty&family=Boldonse&display=swap');
+
+:root{
+    --accent: #2b8cff;
+    --muted: #9aa3b2;
+    --card: #ffffff;
+    --shadow: 0 18px 50px rgba(39,40,44,0.08);
+    --radius: 24px;
+    --gap: 20px;
+    --maxw: 760px;
+    --pad: 40px;
+    --bg-top: #f8fdff;
+    --bg-bottom: #f2fbf8;
+    font-family:  Roboto , Arial;
+    color: #2b2f36;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-image:
+    radial-gradient(circle at 10% 10%, rgba(43,140,255,0.03) 0 2px, transparent 3px),
+    radial-gradient(circle at 90% 40%, rgba(43,140,255,0.02) 0 2px, transparent 3px),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    background-size: auto, auto, 100% 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 16px;
+    width: 100%;
+}
+.heading{
+    font-family: 'BBH Sans Bartle', 'Boldonse', Arial, sans-serif;
+    font-weight: 1100;
+    color: var(--accent);
+    letter-spacing: 4px;
+    font-size: 45px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.main{
+    padding: 0 0 0 0;
+}
+.box{
+    width: 100%;
+    max-width: var(--maxw);
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: var(--pad);
+    box-shadow: var(--shadow);
+    border-top: 6px solid rgba(43,140,255,0.06);
+    margin: 18px 0;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+.field{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-size: 13px;
+    color: #5b6470;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.input, .textarea{
+    padding: 14px 16px;
+    border: 1px solid #e6e9ee;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+    color: #2b2f36;
+}
+.input :focus{
+    box-shadow: 0 8px 30px rgba(43,140,255,0.08);
+    border-color: rgba(43,140,255,0.35);
+}
+.area{
+    min-height: 140px;
+    resize: vertical;
+    padding-top: 12px;
+}
+.full{
+    grid-column: 1 / -1;
+}
+.meta{
+  display:flex;
+  justify-content: flex-end;
+  padding:5px;
+}
+
+.counter-wrap{
+    display: flex;
+    justify-content: flex-end;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+    
+}
+.actions{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+.btn{
+    background: #ffffff
+    color: #141212;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    min-width: 680px;
+    box-shadow: 0 8px 30px rgba(46,94,255,0.12);
+}
+.btn:hover{
+    transform: translateY(-2px);
+    opacity: 1;
+}
+.note{
+    text-align: center;
+    color: #99a1aa;
+    font-size: 12px;
+    margin-top: 12px;
+}
+@media (max-width: 1100px){
+    :root{
+        --maxw: 720px;
+        --pad: 36px;
+    }
+    .heading{
+        font-size: 56px;
+    }
+}
+@media (max-width: 980px){
+    :root{
+        --maxw: 640px;
+    }
+    .heading{
+        font-size: 48px;
+    }
+    .box{
+        padding: 28px;
+    }
+}
+@media (max-width: 760px){
+    .grid{
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .heading{
+        font-size: 36px;
+    }
+    .box{
+        margin: 0 16px;
+        padding: 22px;
+        border-radius: 18px;
+    }
+    .actions{
+        padding: 0 20px;
+    }
+    .btn{
+        min-width: 200px;
+    }
+}
+@media (max-width: 420px){
+    .heading{
+        font-size: 28px;
+    }
+    .box{
+        padding: 18px;
+        border-radius: 14px;
+    }
+    .input, .textarea{
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+    .btn{
+        min-width: 180px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 340px){
+    .heading{
+        font-size: 22px;
+    }
+    .box{
+        padding: 14px;
+    }
+    .btn{
+        width: 100%;
+        min-width: 0;
+    }
+}

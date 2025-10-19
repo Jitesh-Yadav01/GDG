@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+     <link rel="icon"  type="image/svg" href="logo.jpg">
+    <title>Fill Your Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header class="container">
+        <h1 class="heading">FILL YOUR DATA</h1>
+    </header>
+
+    <main class="container main">
+        <section class="box">
+            <form id="form" class="form">
+                <div class="grid">
+                    <div class="field">
+                        <label class="label">Full Name *</label>
+                        <input class="input" type="text" placeholder="Enter your full name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label class="label">College Email *</label>
+                        <input class="input" type="email" placeholder="Enter your college email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label class="label">Branch *</label>
+                        <select class="input" name="branch" required>
+                            <option value="">Select Your Branch</option>
+                            <option>Computer Engineering -A</option>
+                            <option>Computer Engineering -B</option>
+                            <option>Information Technology</option>
+                            <option>Electronics & Telecom -A</option>
+                            <option>Electronics & Telecom -B</option>
+                            <option>Automation and Robotics Engineering</option>
+                            <option>Mechanical Engineering</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="label">Registration Number *</label>
+                        <input class="input" type="text" placeholder="Enter registration number" name="reg" required>
+                    </div>
+                    <div class="field">
+                        <label class="label">Phone Number *</label>
+                        <input class="input" type="tel" placeholder="Enter 10-digit phone number" name="phone" maxlength="10" required>
+                    </div>
+                    <div class="field">
+                        <label class="label">Priority (1-5) *</label>
+                        <input class="input" type="number" min="1" max="5" placeholder="Rate GDSC priority (1-5)" name="priority" required>
+                    </div>
+
+                    <div class="field full">
+                        <label class="label">Why do you want to join GDSC? *</label>
+                        <textarea class="input area" placeholder="Tell us your motivation to join Google Developer Student Clubs..." name="motivation" maxlength="500" required></textarea>
+                        <div class="meta">
+                            <span id="count">0</span><span>/500</span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Your Domain *</label>
+                        <select class="input" name="domain" required>
+                            <option value="">Select Your Domain</option>
+                            <option>Web Development</option>
+                            <option>App Dev</option>
+                            <option>AI/ML</option>
+                            <option>Cloud</option>
+                            <option>Design</option>
+                            <option>Blockchain</option>
+                            <option>Flutter</option>
+                            <option>Outreach</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label class="label">Best Project (GitHub Link) Not Compulsory </label>
+                        <input class="input" type="url" placeholder="https://github.com/username/project" name="project">
+                    </div>
+                </div>
+
+                <div class="submit-wrap">
+                    <button class="btn" type="submit">Submit Form</button>
+                </div>
+
+                <p class="note">By submitting this form, you agree to join our amazing community of developers!</p>
+            </form>
+        </section>
+    </main>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="form.js"></script>
+</body>
+</html>

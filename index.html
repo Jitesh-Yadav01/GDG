@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG Clone</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="container">
+        <nav class="navbar-mobile">
+          <img src="logo.jpg" alt="" width="50px" height="30px">
+            <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+        <div class="navbar">
+         <div class="nav-ops">
+             <a href="#" class="red">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Events</a>
+            <a href="#">Team</a>
+            <a href="#">Calender</a>
+           <a href="#">Contact Us</a>
+         </div>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="#">Calender</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+    <div class="overlay" id="overlay"></div>
+
+        <div class="logo">
+          <img src="logo.jpg" alt="" width="50px" height="30px">
+    </div>
+        </div>
+
+        <div class="container2">
+            <div class="box">
+                  <div class="wrapper">
+                    
+                   <div class="text">
+                    <!-- <i class="fa-brands fa-google""></i> -->
+                     <img src="googlelogo.png" height="24" alt=""> 
+                    <ul class="dynamic-txts">
+                        <li>Google Developer Group</li>
+                    </ul>
+                   </div>
+
+                    <div class="side_logo">
+                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                  </div>
+
+                  <div class="wrapper_two">
+                    <div class="gdg-info top">
+                      <i class="fa-regular fa-clock" style="color: #bbc0c9; margin-right: 8px;"></i>
+                      <p>Google Developer Group, AIT PUNE</p>
+                    </div>
+                    <div class="gdg-info">
+                      <i class="fa-regular fa-clock" style="color: #bbc0c9; margin-right: 8px;"></i>
+                      <p>GDG, Army Institute Of Technology, Pune</p>
+                    </div>
+                  </div>
+
+                  <div class="btns">
+                    <button class="btn one">Google Search</button>
+                    <button class="btn two">I'm Felling AITian</button>
+                  </div>
+            </div>
+        </div>
+
+    
+        <div class="container3">
+            <div class="gdg">
+                <strong class="g" >G</strong> 
+                <a class="d" >D</a> 
+                <a class="gg" >G</a> 
+            </div>
+
+            <div class="aitpune">
+                <a class="ait">AIT</a>
+                <a class="pune">PUNE</a>
+            </div>
+
+   
+        </div>
+
+          <div class="comtainer4">
+              <div class="photo"><img src="photo.png" height="270px" alt=""></div>
+        </div>
+
+        <div class="container5"><img src="Polygon.png" alt=""> </div>
+
+         <div class="container7"> 
+          <div>
+            <p style="margin: 10px;">@gdsc_aitpune</p>
+            <p  style="font-size: 36px; margin-left: 10px;">GDG STUDENT </p>
+            <p  style="font-size: 36px; margin-left: 10px;">CHAPTER </p>
+
+            <a  href="form.html">
+            <div style="border: 1px solid black;">
+              <span class="circle">-></span>
+            <span >Join Us</span>
+            </div>
+            </a>
+            
+          </div>
+        </div>
+        <div class="container6"><img src="bg-image.png" height="180"   width="1500" alt=""> </div>
+
+
+
+       
+
+ <script>
+
+  var loader = document.getElementById("preloader");
+
+  window.addEventListener("load" , function() {
+      loader.style.display = "none";
+  })
+
+  const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+
+  </script>
+
+
+
+</body>
+</html>
